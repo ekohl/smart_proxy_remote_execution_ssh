@@ -32,8 +32,9 @@ module Proxy::RemoteExecution::Ssh
 
     plugin :ssh, Proxy::RemoteExecution::Ssh::VERSION
 
+    requires :dynflow, '~> 0.5'
+
     load_classes do
-      require 'smart_proxy_dynflow'
       require 'smart_proxy_remote_execution_ssh/version'
       require 'smart_proxy_remote_execution_ssh/cockpit'
       require 'smart_proxy_remote_execution_ssh/api'
