@@ -4,8 +4,7 @@ module Proxy::RemoteExecution::Ssh
   class Plugin < Proxy::Plugin
     SSH_LOG_LEVELS = %w[debug info warn error fatal].freeze
 
-    http_rackup_path File.expand_path("http_config.ru", __dir__)
-    https_rackup_path File.expand_path("http_config.ru", __dir__)
+    rackup_path File.expand_path("http_config.ru", __dir__)
 
     settings_file "remote_execution_ssh.yml"
     default_settings :ssh_identity_key_file   => '~/.ssh/id_rsa_foreman_proxy',
